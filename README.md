@@ -14,6 +14,8 @@ This challenge implements the following:
 * After conversion applications could run into a Minikube Kubernetes installed locally.
 * it automates the two applications with bash scripts using go language.
 
+---
+
 * [Prerequisites](#Prerequisites)
 * [Code](#Code) (Go, Python)
 * [Docker file Examples](#DockerFileExample)
