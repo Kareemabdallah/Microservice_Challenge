@@ -2,14 +2,15 @@ package main
 
 import (
 	"encoding/json" // import encoding/json package
-	"fmt"
-	"io/ioutil"
-	"log"
-	"net/http"
+	"fmt"           // import formatted I/O
+	"io/ioutil"     // import I/O utilty functions
+	"log"           // import logging
+	"net/http"      // import HTTP implem.
 
 	"github.com/gorilla/mux" // HTTP router library
 )
 
+// function for handling incoming request URL to match given paths
 func GetArticles(w http.ResponseWriter, r *http.Request) {
 
 	// Open our jsonFile as a byte array
@@ -18,12 +19,13 @@ func GetArticles(w http.ResponseWriter, r *http.Request) {
 	// declaring a data string parsing data as raw
 	data := json.RawMessage(string(byteValue))
 
-	// defining map function with keys as strings and values as type.
+	// defining map function with keyvalue as a string and a value type
 	var articles map[string]*json.RawMessage
 
-	// unmarshalling byteArray which contains jsonFile's content into 'articles'
+	// Unmarshal func parses the JSON-encoded data and stores result in a Go value
+	// unmarshalling byteArray which contains jsonFile's content and stores it into 'articles'
 	err := json.Unmarshal(data, &articles)
-	// if we os.Open returns an error then handle it
+	// if it returns an error then handle it
 	if err != nil {
 		fmt.Println(err)
 	}
