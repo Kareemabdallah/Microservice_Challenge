@@ -49,22 +49,13 @@ sudo install minikube /usr/local/bin/
 ```
 4. Kubectl:
 ```
-    curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
-
-    For example, to download version v1.17.0 on Linux, type:
-
     curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.17.0/bin/linux/amd64/kubectl
-
-    Make the kubectl binary executable.
-
+   
+   
     chmod +x ./kubectl
 
-    Move the binary in to your PATH.
-
     sudo mv ./kubectl /usr/local/bin/kubectl
-
-    Test to ensure the version you installed is up-to-date:
-
+    
     kubectl version --client
 ```
 ## Code
