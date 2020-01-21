@@ -30,12 +30,19 @@ This challenge implements the following:
 
 ## Prerequisities
 
+1. Golang:
+
 go get -u github.com/gorilla/mux
 
+2. 
 Sudo apt-get update -y  && \
-     apt-get install -y python3.7-dev
+     apt-get install -y python3.7-dev && \
+     apt-get install -y python-pip && \
+     pip install -y flask
 
 Sudo pip3 install -r requirements.txt
+
+virtualenv flask
 
 
 ## Code
@@ -76,7 +83,8 @@ Referring to gorilla/mux (https://github.com/gorilla/mux) where it implements a 
 * [Docker](https://docs.docker.com/) - Used to generate RSS Feeds
 * [Docker-Compose](https://docs.docker.com/compose/) - The web framework used
 * [Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/) - Dependency Management
-* [Kompose](https://kubernetes.io/docs/tasks/configure-pod-container/translate-compose-kubernetes/) - Used to generate RSS 
+* [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) - Dependency Management
+* [Kompose](https://kubernetes.io/docs/tasks/configure-pod-container/translate-compose-kubernetes/) - Used to generate RSS
 * [Gorilla/mux](https://www.gorillatoolkit.org/pkg/mux) - The web framework used
 * [CodeShip](https://documentation.codeship.com/) - Dependency Management
 

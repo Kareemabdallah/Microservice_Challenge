@@ -1,0 +1,34 @@
+# Docker Compose file Reference (https://docs.docker.com/compose/compose-file/)
+version: '3'
+
+#Define services
+services:
+    # App service
+    app1:
+        # Docker image build for the service
+        build:
+          context: ./app1 # Use an image built from the specified dockerfile in the app1 directory
+          dockerfile: Dockerfile
+        container_name: app1
+        ports:
+            - 9000:9000 # Forward the exposed port 9000 on HOST to port 9000 on CONTAINER
+        restart: unless-stopped
+        volumes: # Volumes used for more persistance of the data
+            - ./app1:/app
+        networks:
+            - net_deploy
+    app2:
+        build: 
+          context: ./app2
+          dockerfile: Dockerfile
+        container_name: app2
+        ports:
+            - 5000:5000
+        restart: unless-stopped
+        #volumes: # Volumes used for more persistance of the data
+         #   - ./app2:/app
+        networks:
+            - net_deploy
+
+networks: # Networks to join (Services would communicate using their names as they would be on the same network)
+    net_deploy:
