@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Deploy to Minikube using kubectl
+deploy() {
+    echo "🌧️    $(timestamp): deploying to Minikube"
+    kubectl delete deployment example
+    kubectl delete service example
+    kubectl apply -f deploy.yml
+}

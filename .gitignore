@@ -2,7 +2,5 @@ Dockerfile1.build
 Dockerfile1.dist
 Dockerfile2.build
 Dockerfile2.dist
-app1/
-app2/
-app3/
 .vscode/settings.json
+app1/build-compose.sh
