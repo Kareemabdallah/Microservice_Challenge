@@ -31,20 +31,42 @@ This challenge implements the following:
 ## Prerequisities
 
 1. Golang:
-
+```
 go get -u github.com/gorilla/mux
 
-2. 
-Sudo apt-get update -y  && \
-     apt-get install -y python3.7-dev && \
-     apt-get install -y python-pip && \
-     pip install -y flask
+```
 
-Sudo pip3 install -r requirements.txt
+2. Docker:
+```
+https://docs.docker.com/install/
+```
+3.Minikube:
+```
+curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 \
+  && chmod +x minikube
+  sudo mkdir -p /usr/local/bin/
+sudo install minikube /usr/local/bin/
+```
+4. Kubectl:
+```
+    curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
 
-virtualenv flask
+    For example, to download version v1.17.0 on Linux, type:
 
+    curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.17.0/bin/linux/amd64/kubectl
 
+    Make the kubectl binary executable.
+
+    chmod +x ./kubectl
+
+    Move the binary in to your PATH.
+
+    sudo mv ./kubectl /usr/local/bin/kubectl
+
+    Test to ensure the version you installed is up-to-date:
+
+    kubectl version --client
+```
 ## Code
 
 Gorilla/mux package is required to be imported in the application in order to implemet a request router and dispatcher.
@@ -74,7 +96,7 @@ Referring to gorilla/mux (https://github.com/gorilla/mux) where it implements a 
 
 # Authors
 
-* **Kareem Mostafa** - *Initial work* - [KareemMostafa](https://github.com/Kareemabdallah)
+* **Kareem Mostafa** - [KareemMostafa](https://github.com/Kareemabdallah)
 
 ## Built With
 
