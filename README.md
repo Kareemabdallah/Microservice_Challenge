@@ -18,12 +18,10 @@ This challenge implements the following:
 
 * [Prerequisites](#Prerequisites)
 * [Code](#Code) (Go, Python)
-* [Docker file Examples](#DockerFileExample)
-* [Docker Compose Examples](#DockerComposeExample)
-* [Conversion tool Kompose](#ConversionToolKompose)
+* [Kompose](#ConversionToolKompose)
 * [Automation using Codeship](#AutomationUsingCodeship)
-* [Maintaining Application Upgrades](#MaintainingApplicationUpgrades)
-* [Scaling Application](#ScalingApplication)
+* [Maintaining Applications Upgrades](#MaintainingApplicationUpgrades)
+* [Scaling Applications](#ScalingApplication)
 * [Authors](#Authors)
 * [Built With](#BuiltWith)
 
@@ -66,16 +64,7 @@ import "github.com/gorilla/mux"
 
 Referring to gorilla/mux (https://github.com/gorilla/mux) where it implements a request router and dispatcher for matching incoming requests to their respective handler. 
 
-''
-
-## Docker file Examples
-
-(https://github.com/ContainerSolutions/cd-with-docker-tutorial)
-
-## Docker Compose Examples
-
-
-## Conversion tool Kompose
+## Kompose
 
 ## Automation using Codeship
 
@@ -87,17 +76,17 @@ Referring to gorilla/mux (https://github.com/gorilla/mux) where it implements a 
 
 # Authors
 
-* **Kareem Mostafa** - [KareemMostafa](https://github.com/Kareemabdallah)
+* **Kareem Mostafa**
 
 ## Built With
 
-* [Go](https://golang.org/doc/) - The web framework used
-* [Python](https://docs.python.org/3/) - Dependency Management
-* [Docker](https://docs.docker.com/) - Used to generate RSS Feeds
-* [Docker-Compose](https://docs.docker.com/compose/) - The web framework used
-* [Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/) - Dependency Management
-* [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) - Dependency Management
-* [Kompose](https://kubernetes.io/docs/tasks/configure-pod-container/translate-compose-kubernetes/) - Used to generate RSS
-* [Gorilla/mux](https://www.gorillatoolkit.org/pkg/mux) - The web framework used
-* [CodeShip](https://documentation.codeship.com/) - Dependency Management
+* [Go](https://golang.org/doc/)
+* [Python](https://docs.python.org/3/) 
+* [Docker](https://docs.docker.com/) 
+* [Docker-Compose](https://docs.docker.com/compose/) 
+* [Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/) 
+* [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) 
+* [Kompose](https://kubernetes.io/docs/tasks/configure-pod-container/translate-compose-kubernetes/) 
+* [Gorilla/mux](https://www.gorillatoolkit.org/pkg/mux)
+* [CodeShip](https://documentation.codeship.com/) 
 
