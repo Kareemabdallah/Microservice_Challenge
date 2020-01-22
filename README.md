@@ -74,17 +74,16 @@ Referring to gorilla/mux (https://github.com/gorilla/mux) where it implements a 
 
 # Authors
 
-* **Kareem Mostafa** - *Initial work* - [KareemMostafa](https://github.com/Kareemabdallah)
+* **Kareem Mostafa**  [KareemMostafa](https://github.com/Kareemabdallah)
 
 ## Built With
 
-* [Go](https://golang.org/doc/) - The web framework used
-* [Python](https://docs.python.org/3/) - Dependency Management
-* [Docker](https://docs.docker.com/) - Used to generate RSS Feeds
-* [Docker-Compose](https://docs.docker.com/compose/) - The web framework used
-* [Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/) - Dependency Management
-* [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) - Dependency Management
-* [Kompose](https://kubernetes.io/docs/tasks/configure-pod-container/translate-compose-kubernetes/) - Used to generate RSS
-* [Gorilla/mux](https://www.gorillatoolkit.org/pkg/mux) - The web framework used
-* [CodeShip](https://documentation.codeship.com/) - Dependency Management
-
+* [Go](https://golang.org/doc/)
+* [Python](https://docs.python.org/3/)
+* [Docker](https://docs.docker.com/)
+* [Docker-Compose](https://docs.docker.com/compose/) 
+* [Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/) 
+* [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
+* [Kompose](https://kubernetes.io/docs/tasks/configure-pod-container/translate-compose-kubernetes/)
+* [Gorilla/mux](https://www.gorillatoolkit.org/pkg/mux)
+* [CodeShip](https://documentation.codeship.com/)
