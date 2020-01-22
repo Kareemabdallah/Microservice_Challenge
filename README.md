@@ -16,7 +16,7 @@ This challenge implements the following:
 
 ---
 
-* [Prerequisites](#Prerequisites)
+* [Prerequisites](#./Prerequisites)
 * [Code](#Code) (Go, Python)
 * [Kompose](#ConversionToolKompose)
 * [Automation using Codeship](#AutomationUsingCodeship)
