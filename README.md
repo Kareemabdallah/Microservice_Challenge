@@ -16,12 +16,12 @@ This challenge implements the following:
 
 ---
 
-* [Prerequisites](#./Prerequisites)
+* [Prerequisites](#Prerequisites)
 * [Code](#Code) (Go, Python)
-* [Kompose](#ConversionToolKompose)
-* [Automation using Codeship](#AutomationUsingCodeship)
+* [Kompose](#Kompose)
+* [Automation](#Automation)
 * [Maintaining Applications Upgrades](#MaintainingApplicationUpgrades)
-* [Scaling Applications](#ScalingApplication)
+* [Scaling Applications](#ScalingApplications)
 * [Authors](#Authors)
 * [Built With](#BuiltWith)
 
