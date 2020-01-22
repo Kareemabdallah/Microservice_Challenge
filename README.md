@@ -20,8 +20,8 @@ This challenge implements the following:
 * [Code](#Code) (Go, Python)
 * [Kompose](#Kompose)
 * [Automation](#Automation)
-* [Maintaining Applications Upgrades](#Maintaining Application Upgrades)
-* [Scaling Applications](#Scaling Applications)
+* [Maintaining Applications Upgrades](#MaintainingApplicationUpgrades)
+* [Scaling Applications](#ScalingApplications)
 * [Authors](#Authors)
 * [Built With](#BuiltWith)
 
