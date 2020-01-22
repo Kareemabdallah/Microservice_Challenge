@@ -20,8 +20,8 @@ This challenge implements the following:
 * [Code](#Code) (Go, Python)
 * [Kompose](#Kompose)
 * [Automation](#Automation)
-* [Maintaining Applications Upgrades](#MaintainingApplicationUpgrades)
-* [Scaling Applications](#ScalingApplications)
+* [Maintaining Applications Upgrades](#Maintaining Application Upgrades)
+* [Scaling Applications](#Scaling Applications)
 * [Authors](#Authors)
 * [Built With](#BuiltWith)
 
@@ -66,7 +66,7 @@ Referring to gorilla/mux (https://github.com/gorilla/mux) where it implements a 
 
 ## Kompose
 
-## Automation using Codeship
+## Automation
 
 ## Maintaining Application Upgrades
 
