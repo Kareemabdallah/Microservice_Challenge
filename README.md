@@ -18,8 +18,6 @@ This challenge implements the following:
 
 * [Prerequisites](#Prerequisites)
 * [Code](#Code) (Go, Python)
-* [Kompose](#Kompose)
-* [Automation](#Automation)
 * [Maintaining Applications Upgrades](#MaintainingApplicationUpgrades)
 * [Scaling Applications](#ScalingApplications)
 * [Authors](#Authors)
@@ -62,17 +60,15 @@ Gorilla/mux package is required to be imported in the application in order to im
 
 import "github.com/gorilla/mux"
 
-Referring to gorilla/mux (https://github.com/gorilla/mux) where it implements a request router and dispatcher for matching incoming requests to their respective handler. 
+After cloning the Repository, we can run the the two applications using docker-compose:
 
-## Kompose
+```
+docker-compose up
+```
 
-## Automation
-
-## Maintaining Application Upgrades
-
-## Scaling Application
-
-(https://blog.codeship.com/continuous-integration-and-delivery-with-docker/)
+## Application Upgrades && Scaling out
+```
+```
 
 # Authors
 
@@ -89,4 +85,3 @@ Referring to gorilla/mux (https://github.com/gorilla/mux) where it implements a 
 * [Kompose](https://kubernetes.io/docs/tasks/configure-pod-container/translate-compose-kubernetes/) 
 * [Gorilla/mux](https://www.gorillatoolkit.org/pkg/mux)
 * [CodeShip](https://documentation.codeship.com/) 
-
