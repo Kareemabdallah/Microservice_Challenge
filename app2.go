@@ -53,15 +53,15 @@ func Reverse(s string) string {
 	return string(r)
 }
 
-func homepage(w http.ResponseWriter, r *http.Request) {
+/*func homepage(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "You are on the home page")
-}
+}*/
 
 func main() {
 
 	r := mux.NewRouter() //.StrictSlash(true)
 	r.HandleFunc("/articles", handler).Methods("GET")
-	r.HandleFunc("/", homepage).Methods("GET")
-	log.Fatal(http.ListenAndServe(":8000", r))
+	//r.HandleFunc("/", homepage).Methods("GET")
+	log.Fatal(http.ListenAndServe(":5000", r))
 
 }
