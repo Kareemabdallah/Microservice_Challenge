@@ -15,6 +15,10 @@ RUN go build app2.go
 
 FROM alpine as build1
 WORKDIR /build
+COPY go.mod .
+COPY go.sum .
+RUN go mod download
+
 COPY --from=builder /build/app1 /app1/
 ENTRYPOINT ./app1
  
