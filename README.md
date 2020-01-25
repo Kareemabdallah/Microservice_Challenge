@@ -72,25 +72,11 @@ docker-compose up
 
 # Authors
 
-<<<<<<< HEAD
-* **Kareem Mostafa**  [KareemMostafa](https://github.com/Kareemabdallah)
-=======
 * **Kareem Mostafa**
->>>>>>> origin/master
 
 ## Built With
 
 * [Go](https://golang.org/doc/)
-<<<<<<< HEAD
-* [Python](https://docs.python.org/3/)
-* [Docker](https://docs.docker.com/)
-* [Docker-Compose](https://docs.docker.com/compose/) 
-* [Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/) 
-* [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
-* [Kompose](https://kubernetes.io/docs/tasks/configure-pod-container/translate-compose-kubernetes/)
-* [Gorilla/mux](https://www.gorillatoolkit.org/pkg/mux)
-* [CodeShip](https://documentation.codeship.com/)
-=======
 * [Python](https://docs.python.org/3/) 
 * [Docker](https://docs.docker.com/) 
 * [Docker-Compose](https://docs.docker.com/compose/) 
@@ -99,4 +85,3 @@ docker-compose up
 * [Kompose](https://kubernetes.io/docs/tasks/configure-pod-container/translate-compose-kubernetes/) 
 * [Gorilla/mux](https://www.gorillatoolkit.org/pkg/mux)
 * [CodeShip](https://documentation.codeship.com/) 
->>>>>>> origin/master
