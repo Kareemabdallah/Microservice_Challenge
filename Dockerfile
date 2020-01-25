@@ -4,9 +4,10 @@ RUN apk update && apk add --no-cache git
 RUN mkdir -p /build
 ADD . /build
 WORKDIR /build
+RUN go get -d -v ./...
+RUN go install -v -/..
 ENV GO111MODULE=on
 ENV PORT=9000
-RUN go get -d -v -u github.com/gorilla/mux
 RUN go build app1.go
 RUN go build app2.go
 
