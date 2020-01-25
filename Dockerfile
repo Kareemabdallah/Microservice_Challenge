@@ -4,19 +4,16 @@ RUN apk update && apk add --no-cache git
 RUN mkdir -p /build
 ADD . /build
 WORKDIR /build
-RUN go get -d -v ./...
-RUN go install -v -/..
+RUN go mod download
 ENV GO111MODULE=on
 ENV PORT=9000
-RUN go build app1.go
-RUN go build app2.go
+RUN go build -o app1.go .
+RUN go build -o app2.go .
 
 # Stage 2
 
 FROM alpine as build1
 WORKDIR /build
-COPY go.mod .
-COPY go.sum .
 RUN go mod download
 
 COPY --from=builder /build/app1 /app1/
