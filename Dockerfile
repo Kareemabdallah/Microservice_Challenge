@@ -7,9 +7,10 @@ WORKDIR /build
 COPY go.mod .
 COPY go.sum .
 
+RUN go get -d github.com/gorilla/mux
 COPY . .
 ENV GO111MODULE=on
-RUN go build -o app1 .
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o app1 .
 
 # Stage 2
 FROM golang:1.10 as build1
