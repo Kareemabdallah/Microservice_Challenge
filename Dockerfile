@@ -8,6 +8,7 @@ COPY go.mod .
 COPY go.sum .
 
 RUN go mod download
+COPY . .
 ENV GO111MODULE=on
 RUN go build -o app1 .
 
