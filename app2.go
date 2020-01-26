@@ -10,58 +10,48 @@ import (
 	"github.com/gorilla/mux"
 )
 
-/*type Articles struct {
-	Articles []Article `json:"articles"`
-}
-
 type Article struct {
 	id      string `json:"id"`
 	message string `json:"message"`
-}*/
+}
 
 func handler(w http.ResponseWriter, r *http.Request) {
 
 	resp, err := http.Get("http://localhost:9000/")
-	//data := json.RawMessage(string(resp)) // declaring a data string parsing data as raw
 
-	w.Header().Set("Content-Type", "application/json; charset=UTF-8")
-	w.WriteHeader(http.StatusOK)
-	//json.NewEncoder(w).decode(resp)
 	if err != nil {
 		log.Fatal(err)
 	}
-	defer resp.Body.Close()
 
-	//var generic map[string]interface{}
+	defer resp.Body.Close() //defering for future usage
+
+	var result map[string]interface{} //parsing JSON strings
+
 	body, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
 		log.Fatal(err)
 	}
-	text := string(body)
-	json.Unmarshal([]byte(body), &resp)
-	str := fmt.Sprint(text) //converting data type interface to string
+
+	json.Unmarshal([]byte(body), &result) //Uunmarshalling content into result
+
+	str := fmt.Sprint(result["message"]) //converting data type interface to string
 	str1 := Reverse(str)
-	fmt.Printf(string(str1))
+	fmt.Fprintf(w, str1)
 
 }
 
-func Reverse(s string) string {
+func Reverse(s string) string { // converts strings to rune slices
 	r := []rune(s)
-	for i, j := 0, len(r)-1; i < len(r)/2; i, j = i+1, j-1 {
+	for i, j := 0, len(r)-1; i < len(r)/2; i, j = i+1, j-1 { //
 		r[i], r[j] = r[j], r[i]
 	}
 	return string(r)
 }
 
-/*func homepage(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "You are on the home page")
-}*/
-
 func main() {
 
-	r := mux.NewRouter() //.StrictSlash(true)
-	r.HandleFunc("/articles", handler).Methods("GET")
-	//r.HandleFunc("/", homepage).Methods("GET")
-	log.Fatal(http.ListenAndServe(":5000", r))
+	r := mux.NewRouter()
+	r.HandleFunc("/", handler).Methods("GET")
+	log.Fatal(http.ListenAndServe(":7000", r))
 
 }

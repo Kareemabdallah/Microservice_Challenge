@@ -20,10 +20,10 @@ services:
     app2:
         build: 
           context: ./app2
-          dockerfile: Dockerfile
+          dockerfile: Dockerfile2
         container_name: app2
         ports:
-            - 5000:5000
+            - 7000:7000
         restart: unless-stopped
         #volumes: # Volumes used for more persistance of the data
          #   - ./app2:/app

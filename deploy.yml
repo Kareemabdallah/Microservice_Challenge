@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
@@ -9,11 +9,20 @@ metadata:
     io.kompose.service: app1
   name: app1
 spec:
+  selector:
+  matchLabels:
+    app: app1
+    tier: app1
+    track: stable
   replicas: 1
   strategy:
     type: Recreate
   template:
     metadata:
+      labels:
+        app: app1
+        tier: app1
+        track: stable
       annotations:
         kompose.cmd: kompose convert
         kompose.version: 1.20.0 (f3d54d784)
@@ -28,14 +37,14 @@ spec:
         ports:
         - containerPort: 9000
         resources: {}
-        volumeMounts:
-        - mountPath: /app
-          name: app1-claim0
+        #volumeMounts:
+        #- mountPath: /app
+         # name: app1-claim0
       restartPolicy: Always
-      volumes:
-      - name: app1-claim0
-        persistentVolumeClaim:
-          claimName: app1-claim0
+      #volumes:
+      #- name: app1-claim0
+       # persistentVolumeClaim:
+        #  claimName: app1-claim0
 status: {}
 ---
     apiVersion: v1
@@ -57,3 +66,4 @@ spec:
     io.kompose.service: app1
 status:
   loadBalancer: {}
+---
