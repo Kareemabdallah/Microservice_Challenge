@@ -12,10 +12,10 @@ tmpfile=$(mktemp)
     echo "⏲️	$(timestamp): started build script..."
     echo "🐋	$(timestamp): building image app1:test"
     docker build -t app1:test -f Dockerfile .
-    docker run -d --rm -p 9000:9000 app1:test
+    docker run -dti --rm -p 9000:9000 app1:test
 
     docker build -t app2:test -f Dockerfile2 .
-    docker run -d --rm -p 7000:7000 app2:test
+    docker run -dti --rm -p 7000:7000 app2:test
     
 
 echo "🌧️	 $(timestamp): deploying to Minikube"
