@@ -1,49 +1,49 @@
 
-# Containerized microservice challenge
+# Containerized microservice
 
-This challenge implements the following: 
+This repossitory implements the following: 
 
-* It implements an application written in golang for exposing a JSON document 'db.json'.
-* It implements another application written in python for reversing the text acquired from the first Application.
-* It dockerizes the two applications in Dockerfiles.
-* Dockerfile could be written into docker-compose files for more automation.
-* Docker-compose files could be converted into Kubernetes Resources using Kompose conversion tool.
-    https://kompose.io/
-    https://kubernetes.io/docs/tasks/configure-pod-container/translate-compose-kubernetes/
-    
-* After conversion applications could run into a Minikube Kubernetes installed locally.
-* it automates the two applications with bash scripts using go language.
+* Implements an application written in golang exposing a JSON document 'static/db.json' when visiting HTTP client.
+* Implements another go application which reverses the message text acquired from the first Application.
+* Dockerizes the two applications.
+* Docker-compose file is added when using docker-compose.
+* Docker-compose file can be converted to a k8s deployment for minikube implementations.
+* Build script for building the docker images and run it.
+* After conversion could run into a Minikube Kubernetes installed locally.
+* Scaling out.
+* Maintains the regular applications upgrades.
 
 ---
 
 * [Prerequisites](#Prerequisites)
-* [Code](#Code) (Go, Python)
-* [Maintaining Applications Upgrades](#MaintainingApplicationUpgrades)
-* [Scaling Applications](#ScalingApplications)
-* [Authors](#Authors)
+* [Dependencies](#Dependencies)
 * [Built With](#BuiltWith)
 
 
 ## Prerequisities
 
-1. Golang:
+1. Go:
 ```
-go get -u github.com/gorilla/mux
-
+https://golang.org/doc/install
 ```
 
 2. Docker:
 ```
 https://docs.docker.com/install/
 ```
-3.Minikube:
+
+3. Docker Compose:
+```
+https://docs.docker.com/compose/install/
+```
+4. Minikube:
 ```
 curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 \
   && chmod +x minikube
   sudo mkdir -p /usr/local/bin/
 sudo install minikube /usr/local/bin/
 ```
-4. Kubectl:
+5. Kubectl:
 ```
     curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.17.0/bin/linux/amd64/kubectl
    
@@ -54,25 +54,31 @@ sudo install minikube /usr/local/bin/
     
     kubectl version --client
 ```
-## Code
+6. Kompose
+```
+    https://kompose.io/
+    
+    https://kubernetes.io/docs/tasks/configure-pod-container/translate-compose-kubernetes/
+   ```
 
-Gorilla/mux package is required to be imported in the application in order to implemet a request router and dispatcher.
+## Dependencies
 
+Gorilla/mux package is required to be imported inside the application in order to implemet a request router and dispatcher by adding:
+
+```
 import "github.com/gorilla/mux"
+```
+It must be downloaded at first using the command:
+
+```
+go get -u github.com/gorilla/mux
+```
 
 After cloning the Repository, we can run the the two applications using docker-compose:
 
 ```
 docker-compose up
 ```
-
-## Application Upgrades && Scaling out
-```
-```
-
-# Authors
-
-* **Kareem Mostafa**
 
 ## Built With
 
