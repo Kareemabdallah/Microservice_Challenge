@@ -11,7 +11,7 @@ RUN go get -d github.com/gorilla/mux
 RUN go mod download
 COPY . .
 ENV GO111MODULE=on
-RUN RUN RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o app1 .
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o app1 .
 
 # Stage 2
 FROM scratch
