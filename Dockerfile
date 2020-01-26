@@ -1,7 +1,7 @@
 FROM golang:1.10 as builder
 
 RUN mkdir -p /build
-ADD ./app1 /build/
+ADD ./app_1 /build/
 WORKDIR /build
 
 COPY go.mod .
