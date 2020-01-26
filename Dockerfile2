@@ -11,7 +11,7 @@ RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o app2 .
 
 # Stage 2
 FROM alpine:latest
-
+RUN apk add --no-cache curl
 COPY --from=builder /build/ /app/
 WORKDIR /app
 EXPOSE 7000
