@@ -7,6 +7,8 @@ WORKDIR /build
 COPY go.mod .
 COPY go.sum .
 
+RUN go get -d github.com/gorilla/mux
+RUN go mod download
 COPY . .
 ENV GO111MODULE=on
 RUN go build -o app2 .
