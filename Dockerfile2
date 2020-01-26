@@ -15,4 +15,5 @@ RUN apk add --no-cache curl
 COPY --from=builder /build/ /app/
 WORKDIR /app
 EXPOSE 7000
+ENTRYPOINT ["/usr/bin/curl"]
 CMD [ "./app2" ]
