@@ -1,1 +1,1 @@
-module github.com/gorilla/mux v1.7.3
+module github.com/gorilla/mux
