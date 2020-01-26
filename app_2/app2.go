@@ -52,6 +52,7 @@ func main() {
 
 	r := mux.NewRouter()
 	r.HandleFunc("/", handler).Methods("GET")
+	log.Println("Listening on localhost:7000")
 	log.Fatal(http.ListenAndServe(":7000", r))
 
 }
