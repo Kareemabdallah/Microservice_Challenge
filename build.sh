@@ -9,7 +9,6 @@ timestamp() {
 tmpfile=$(mktemp)
 
 # Go build
-build () {
     echo "⏲️	$(timestamp): started build script..."
     echo "🐋	$(timestamp): building image app1:test"
     docker build -t app1:test -f Dockerfile .
