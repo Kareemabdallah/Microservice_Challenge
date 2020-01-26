@@ -15,7 +15,7 @@ func GetArticles(w http.ResponseWriter, r *http.Request) {
 	byteValue, _ := ioutil.ReadFile("static/db.json")
 	data := json.RawMessage(string(byteValue)) // declaring a data string parsing data as raw
 	json.NewEncoder(w).Encode(&data)           //Encoding JSON to Server response
-	fmt.Print(data)
+	fmt.Println(data)
 
 }
 
