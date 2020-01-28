@@ -1,17 +1,20 @@
 
 sudo: false
 language: go
-go:
+go: 
   - 1.x
   - master
 matrix:
   allow_failures:
     - go: master
   fast_finish: true
-install:
-  - # Do nothing. This is needed to prevent default install action "go get -t -v ./..." from happening here (we want it to happen inside script step).
+  env: GO111MODULE=on
+before_install:
+    - go get -u github.com/gorilla/mux
 script:
-  - go get -t -v ./...
-  - diff -u <(echo -n) <(gofmt -d -s .)
-  - go tool vet .
-  - go test -v -race ./...
+    - go get -t -v ./...
+    - diff -u <(echo -n) <(gofmt -d -s .)
+    - go tool vet .
+    - go test -v -race ./...
+    - go build /app_1/app1.go
+    - go test /app_1/app1.go
