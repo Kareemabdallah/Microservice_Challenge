@@ -11,8 +11,8 @@ import (
 )
 
 type Article struct {
-	id      string `json:"id"`
-	message string `json:"message"`
+	Id      string `json:"id"`
+	Message string `json:"message"`
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
