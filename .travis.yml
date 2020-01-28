@@ -25,8 +25,8 @@ before_script:
 script:
   - docker build --pull --cache-from snakehomeorganization/app1 --tag snakehomeorganization/app1 -f Dockerfile .
   - docker build --pull --cache-from snakehomeorganization/app1 --tag snakehomeorganization/app2 -f Dockerfile2 .
-  - docker run -p 9000:9000 snakehomeorganization/app1
-  - docker run -p 7000:7000 snakehomeorganization/app2
+  - docker run -dti --rm -p 9000:9000 snakehomeorganization/app1
+  - docker run -dti --rm -p 7000:7000 snakehomeorganization/app2
 after_script:
 - docker images
 before_deploy:
