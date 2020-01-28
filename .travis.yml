@@ -1,20 +1,24 @@
-
-sudo: false
 language: go
-go: 
-  - 1.x
-  - master
+
 matrix:
+    include:
+      - go: 1.2
+      - go: 1.3
+      - go: 1.4
+      - go: 1.5
+      - go: 1.6
+      - go: 1.7
+      - go: 1.8
+      - go: tip
+      
+jobs:
   allow_failures:
     - go: master
   fast_finish: true
-  env: GO111MODULE=on
-before_install:
-    - go get -u github.com/gorilla/mux
+install:
+    - # skip
 script:
     - go get -t -v ./...
     - diff -u <(echo -n) <(gofmt -d -s .)
     - go tool vet .
     - go test -v -race ./...
-    - go build /app_1/app1.go
-    - go test /app_1/app1.go
