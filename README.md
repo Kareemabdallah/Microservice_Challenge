@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/Kareemabdallah/Microservice_Challenge.svg?branch=master)](https://travis-ci.org/Kareemabdallah/Microservice_Challenge)
 
 # Containerized microservice
 
