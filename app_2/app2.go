@@ -10,7 +10,8 @@ import (
 	"github.com/gorilla/mux"
 )
 
-type Article struct {
+// defining JSON file structs
+type article struct {
 	Id      string `json:"id"`
 	Message string `json:"message"`
 }
@@ -35,12 +36,12 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	json.Unmarshal([]byte(body), &result) //Uunmarshalling content into result
 
 	str := fmt.Sprint(result["message"]) //converting data type interface to string
-	str1 := Reverse(str)
+	str1 := reverse(str)
 	fmt.Fprintf(w, str1)
 
 }
 
-func Reverse(s string) string { // converts strings to rune slices
+func reverse(s string) string { // converts strings to rune slices
 	r := []rune(s)
 	for i, j := 0, len(r)-1; i < len(r)/2; i, j = i+1, j-1 { //
 		r[i], r[j] = r[j], r[i]

@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/Kareemabdallah/Microservice_Challenge.svg?branch=master)](https://travis-ci.org/Kareemabdallah/Microservice_Challenge)
+[![Go Report Card](https://goreportcard.com/badge/github.com/Kareemabdallah/Microservice_Challenge)](https://goreportcard.com/report/github.com/Kareemabdallah/Microservice_Challenge)
 
 # Containerized microservice
 
